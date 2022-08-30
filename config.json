@@ -1,0 +1,55 @@
+{
+    "workflowApiVersion": "1.0",
+    "metaData": {
+        "version": "2.0",
+        "icon": "../../images/Comms - Custom Email.png",
+        "iconSmall": "../../images/Comms - Custom Email.png"
+    },
+    "type": "REST",
+    "lang": {
+        "en-US": {
+            "name": "Auto-Send API - Custom Activity v1.10",
+            "description": "Pass records to CloudPage for trigger sends"
+        }
+    },
+    "arguments": {
+        "execute": {
+		    "inArguments":[],
+            "outArguments": [],
+		    "url": "https://page.super-retirement.com.au/siab-custom-activity-execute-V2?id=769f1ba2904d46baa3c8068763044879",
+            "verb": "POST",
+            "body": "",
+            "header": "",
+            "format": "json",
+            "useJwt": false,
+            "timeout": 10000
+        }
+    },
+    "configurationArguments": {
+        "applicationExtensionKey": "c4d32529-a780-48b4-8a88-a70ba1461235",
+    	"defaults": {"priority": "4"},
+        "save": {
+        	"url": "https://page.super-retirement.com.au/siab-custom-activity-save-V2",
+            "body": "",
+            "verb": "POST",
+            "useJwt": false
+        },
+        "publish": {
+        	"url": "https://page.super-retirement.com.au/siab-custom-activity-publish-V2",
+            "verb": "POST",
+            "body": "",
+            "useJwt": false
+        },
+        "validate": {
+        	"url": "https://page.super-retirement.com.au/siab-custom-activity-validate-V2",
+            "verb": "POST",
+            "body": "",
+            "useJwt": false
+        }
+    },
+    "edit": {
+    	"url": "https://chrish-bucket.s3-ap-southeast-2.amazonaws.com/SFMC_Custom_Activities/Activities/Auto-Send-API%20v4/index.html",
+        "height": 400,
+        "width": 500
+    }
+}
